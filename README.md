@@ -1,2 +1,2 @@
-# contest_web
-Contest web
+# Contest web
+Web application
