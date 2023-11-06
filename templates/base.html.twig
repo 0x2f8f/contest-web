@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('/img/icon.ico') }}">
+        <link rel="icon" type="image/png" href="{{ asset('/img/icon.ico') }}">
+
+        {% block stylesheets %}
+            <!-- Fonts and icons -->
+            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+            <link rel="stylesheet" href="{{ asset('/css/font-awesome.min.css') }}">
+            <!-- Font Awesome Icons -->
+            <script src="{{ asset('/js/font-awesome-icons.js') }}" crossorigin="anonymous"></script>
+
+            <!-- Material Icons -->
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+            <!-- Material Kit CSS -->
+            <link href="{{ asset('/css/material-kit.css') }}" rel="stylesheet" />
+        {% endblock %}
+
+        <title>{% block title %}{{ site_title }}{% endblock %}</title>
+
+        {% block javascripts %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block navbar %}
+            {{ include('layout/navbar.html.twig') }}
+        {% endblock %}
+
+        {% block body %}
+
+        {% endblock %}
+
+        {% block footer %}
+            {{ include('layout/footer.html.twig') }}
+        {% endblock %}
+    </body>
+</html>
